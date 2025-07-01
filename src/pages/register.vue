@@ -39,7 +39,7 @@ const isPasswordVisible = ref(false)
         </template>
 
         <VCardTitle class="font-weight-semibold text-2xl text-uppercase">
-          MY WEB APP
+          Materio
         </VCardTitle>
       </VCardItem>
 
