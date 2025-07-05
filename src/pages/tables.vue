@@ -1,53 +1,103 @@
 <script setup>
-import DemoSimpleTableBasics from '@/views/pages/tables/DemoSimpleTableBasics.vue'
-import DemoSimpleTableDensity from '@/views/pages/tables/DemoSimpleTableDensity.vue'
-import DemoSimpleTableFixedHeader from '@/views/pages/tables/DemoSimpleTableFixedHeader.vue'
-import DemoSimpleTableHeight from '@/views/pages/tables/DemoSimpleTableHeight.vue'
-import DemoSimpleTableTheme from '@/views/pages/tables/DemoSimpleTableTheme.vue'
+import InfoCard from "@/components/cards/InfoCard.vue";
 </script>
-
 <template>
-  <VRow>
-    <VCol cols="12">
-      <VCard title="Basic">
-        <DemoSimpleTableBasics />
-      </VCard>
-    </VCol>
+  <VCard>
+    <VCardItem>
+      <VCardTitle>โต๊ะในร้าน</VCardTitle>
+    </VCardItem>
+    <VCardText>
+      <VRow>
+        <VCol cols="3">
+          <InfoCard
+            title="โต๊ะทั้งหมด"
+            :stats="10"
+            unit="ตัว"
+            icon="mdi-table"
+            color="primary"
+          />
+        </VCol>
+        <VCol cols="3">
+          <InfoCard
+            title="โต๊ะว่าง"
+            :stats="5"
+            unit="ตัว"
+            icon="mdi-table-plus"
+            color="success"
+          />
+        </VCol>
+        <VCol cols="3">
+          <InfoCard
+            title="ใช้งานอยู่"
+            :stats="5"
+            unit="ตัว"
+            icon="mdi-table-account"
+            color="warning"
+          />
+        </VCol>
+        <VCol cols="3">
+          <VCard class="align-center justify-center d-flex fill-height">
+            <VBtn                
+              class="fill-height"
+              variant="text"
+              block
+              text
+            >
+              <VIcon>mdi-plus</VIcon>
+              เพิมโต๊ะใหม่
+            </VBtn>
+          </VCard>
+        </VCol>
+      </VRow>
+    </VCardText>
+  </VCard>
+  <VCard class="mt-8">
+    <VCardText>
+        <VRow>
+            <v-container class="text-center">
+    <v-row justify="center">
+      <v-col cols="12" md="4" sm="6">
+        <v-btn rounded="xl" size="x-large" block>โต๊ะ 1</v-btn>
+      </v-col>
 
-    <VCol cols="12">
-      <VCard title="Theme">
-        <VCardText>
-          use <code>theme</code> prop to switch table to the dark theme.
-        </VCardText>
-        <DemoSimpleTableTheme />
-      </VCard>
-    </VCol>
+      <v-col cols="12" md="4" sm="6">
+        <v-btn rounded="xl" size="x-large" block>โต๊ะ 2</v-btn>
+      </v-col>
 
-    <VCol cols="12">
-      <VCard title="Density">
-        <VCardText>
-          You can show a dense version of the table by using the <code>density</code> prop.
-        </VCardText>
-        <DemoSimpleTableDensity />
-      </VCard>
-    </VCol>
+      <v-col cols="12" md="4" sm="6">
+        <v-btn rounded="xl" size="x-large" block>โต๊ะ 3</v-btn>
+      </v-col>
 
-    <VCol cols="12">
-      <VCard title="Height">
-        <VCardText>
-          You can set the height of the table by using the <code>height</code> prop.
-        </VCardText>
-        <DemoSimpleTableHeight />
-      </VCard>
-    </VCol>
+      <v-col cols="12" md="4" sm="6">
+        <v-btn rounded="xl" size="x-large" block>โต๊ะ 4</v-btn>
+      </v-col>
 
-    <VCol cols="12">
-      <VCard title="Fixed Header">
-        <VCardText>
-          You can fix the header of table by using the <code>fixed-header</code> prop.
-        </VCardText>
-        <DemoSimpleTableFixedHeader />
-      </VCard>
-    </VCol>
-  </VRow>
+      <v-col cols="12" md="4" sm="6">
+        <v-btn rounded="xl" size="x-large" block>โต๊ะ 5</v-btn>
+      </v-col>
+
+      <v-col cols="12" md="4" sm="6">
+        <v-btn rounded="xl" size="x-large" block>โต๊ะ 6</v-btn>
+      </v-col>
+
+      <v-col cols="12" md="4" sm="6">
+        <v-btn rounded="xl" size="x-large" block>โต๊ะ 7</v-btn>
+      </v-col>
+
+      <v-col cols="12" md="4" sm="6">
+        <v-btn rounded="xl" size="x-large" block>โต๊ะ 8</v-btn>
+      </v-col>
+
+      <v-col cols="12" md="4" sm="6">
+        <v-btn rounded="xl" size="x-large" block>โต๊ะ 9</v-btn>
+      </v-col>
+
+      <v-col cols="12" md="4" sm="6">
+        <v-btn rounded="xl" size="x-large" block>โต๊ะ 10</v-btn>
+      </v-col>
+    </v-row>
+  </v-container>
+        </VRow>
+    </VCardText>
+  </VCard>
 </template>

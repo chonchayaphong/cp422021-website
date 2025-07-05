@@ -17,7 +17,7 @@ import VerticalNavLink from '@layouts/components/VerticalNavLink.vue';
     :item="{
       title: 'โต๊ะอาหาร',
       icon: 'mdi-table-chair',
-      to: '/table',
+      to: '/tables',
     }"
   />
 
@@ -81,7 +81,7 @@ import VerticalNavLink from '@layouts/components/VerticalNavLink.vue';
     :item="{
       title: 'ผู้ใช้งาน',
       icon: 'mdi-account',
-      to: '/user',
+      to: '/users',
     }"
   />
 
