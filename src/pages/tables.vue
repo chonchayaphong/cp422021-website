@@ -1,5 +1,9 @@
 <script setup>
 import InfoCard from "@/components/cards/InfoCard.vue";
+
+import { useTableStore } from "@/store/table";
+const tableStore = useTableStore();
+
 </script>
 <template>
   <VCard>
@@ -56,44 +60,10 @@ import InfoCard from "@/components/cards/InfoCard.vue";
         <VRow>
             <v-container class="text-center">
     <v-row justify="center">
-      <v-col cols="12" md="4" sm="6">
-        <v-btn rounded="xl" size="x-large" block>โต๊ะ 1</v-btn>
-      </v-col>
-
-      <v-col cols="12" md="4" sm="6">
-        <v-btn rounded="xl" size="x-large" block>โต๊ะ 2</v-btn>
-      </v-col>
-
-      <v-col cols="12" md="4" sm="6">
-        <v-btn rounded="xl" size="x-large" block>โต๊ะ 3</v-btn>
-      </v-col>
-
-      <v-col cols="12" md="4" sm="6">
-        <v-btn rounded="xl" size="x-large" block>โต๊ะ 4</v-btn>
-      </v-col>
-
-      <v-col cols="12" md="4" sm="6">
-        <v-btn rounded="xl" size="x-large" block>โต๊ะ 5</v-btn>
-      </v-col>
-
-      <v-col cols="12" md="4" sm="6">
-        <v-btn rounded="xl" size="x-large" block>โต๊ะ 6</v-btn>
-      </v-col>
-
-      <v-col cols="12" md="4" sm="6">
-        <v-btn rounded="xl" size="x-large" block>โต๊ะ 7</v-btn>
-      </v-col>
-
-      <v-col cols="12" md="4" sm="6">
-        <v-btn rounded="xl" size="x-large" block>โต๊ะ 8</v-btn>
-      </v-col>
-
-      <v-col cols="12" md="4" sm="6">
-        <v-btn rounded="xl" size="x-large" block>โต๊ะ 9</v-btn>
-      </v-col>
-
-      <v-col cols="12" md="4" sm="6">
-        <v-btn rounded="xl" size="x-large" block>โต๊ะ 10</v-btn>
+      <v-col v-for ="table in tableStore.tables" cols="12" md="4" sm="6">
+        <v-btn rounded="xl" size="x-large" block>
+          {{ table.name }}
+        </v-btn>
       </v-col>
     </v-row>
   </v-container>
