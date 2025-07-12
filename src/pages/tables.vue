@@ -1,6 +1,6 @@
 <script setup>
 import InfoCard from "@/components/cards/InfoCard.vue";
-
+import TableInfoCard from "@/components/cards/TableInfoCard.vue";
 import { useTableStore } from "@/store/table";
 const tableStore = useTableStore();
 const reserveTable = (table) => {
@@ -65,10 +65,11 @@ const reserveTable = (table) => {
             <v-container class="text-center">
     <v-row justify="center">
       <v-col v-for ="table in tableStore.tables" cols="12" md="4" sm="6">
-        <v-btn @click ="reserveTable(table)" rounded="xl" size="x-large" block>
+        <!--v-btn @click ="reserveTable(table)" rounded="xl" size="x-large" block>
           {{ table.name }} - {{ table.status }}
-        </v-btn>
+        </v-btn-->
       </v-col>
+      <TableInfoCard :table = "table"/>
     </v-row>
   </v-container>
         </VRow>
