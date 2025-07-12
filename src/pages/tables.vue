@@ -68,8 +68,8 @@ const reserveTable = (table) => {
         <!--v-btn @click ="reserveTable(table)" rounded="xl" size="x-large" block>
           {{ table.name }} - {{ table.status }}
         </v-btn-->
+        <TableInfoCard :table="table"/>
       </v-col>
-      <TableInfoCard :table = "table"/>
     </v-row>
   </v-container>
         </VRow>
